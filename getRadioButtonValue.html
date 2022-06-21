@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>
+Get Radio button value using jquery
+</title>
+</head>
+<style></style>
+<body>
+<h3>Get Radio Button Value Using Jquery</h3>
+<form id="input">
+<input type="radio" name="sub" value="Tamil" />Tamil<br/>
+<input type="radio" name="sub" value="English" />English<br/>
+<input type="radio" name="sub" value="Maths" />Maths<br/>
+<br><br>
+<input type="button" id="btn" value="Get Value">
+<p></p>
+</form>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn").click(function(){
+	var value=$('input[name=sub]:checked').val();
+	$('p').html('<br/>Selected Radio button value is:<b>'+value+'</b>');
+	});
+});
+</script>
+</body>
+
+</html>
